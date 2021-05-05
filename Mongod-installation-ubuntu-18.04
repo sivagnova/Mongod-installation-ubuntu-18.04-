@@ -1,6 +1,12 @@
 
 ubuntu 18.04
 
+#Refer the site 
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-18-04-source
+
+
+
 curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 apt-key list
 
@@ -10,4 +16,13 @@ sudo apt update
 sudo apt install mongodb-org
 sudo systemctl status mongod
 sudo systemctl enable mongod
+sudo systemctl restart mongodb (if needed)
 mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+
+ use blocksite
+switched to db blocksite
+> 
+> db.author.insert({name: "Chrome"})
+WriteResult({ "nInserted" : 1 })
+
+
